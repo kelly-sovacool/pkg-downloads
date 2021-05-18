@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 [`mikropml`](https://github.com/SchlossLab/mikropml) package download counts from `cranlogs`
 
-```{r lib}
+```{r lib, message = FALSE}
 library(cranlogs)
 library(cowplot)
 library(magick)

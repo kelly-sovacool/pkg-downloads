@@ -15,20 +15,8 @@ counts from `cranlogs`
 library(cranlogs)
 library(cowplot)
 library(magick)
-#> Linking to ImageMagick 6.9.12.3
-#> Enabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp
-#> Disabled features: fftw, ghostscript, x11
 library(rsvg)
-#> Linking to librsvg 2.48.4
 library(tidyverse)
-#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-#> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
-#> ✓ tibble  3.1.1     ✓ dplyr   1.0.6
-#> ✓ tidyr   1.1.3     ✓ stringr 1.4.0
-#> ✓ readr   1.4.0     ✓ forcats 0.5.1
-#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-#> x dplyr::filter() masks stats::filter()
-#> x dplyr::lag()    masks stats::lag()
 ```
 
 ## Download the downloads
