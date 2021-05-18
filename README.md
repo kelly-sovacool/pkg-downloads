@@ -11,9 +11,15 @@
 [`mikropml`](https://github.com/SchlossLab/mikropml) package download
 counts from `cranlogs`
 
-## Download the downloads
-
 ``` r
+library(cranlogs)
+library(cowplot)
+library(magick)
+#> Linking to ImageMagick 6.9.12.3
+#> Enabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp
+#> Disabled features: fftw, ghostscript, x11
+library(rsvg)
+#> Linking to librsvg 2.48.4
 library(tidyverse)
 #> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
 #> ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
@@ -23,8 +29,13 @@ library(tidyverse)
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
-downloads <- cranlogs::cran_downloads(package = "mikropml",
-                                      from = "2020-11-23") %>%
+```
+
+## Download the downloads
+
+``` r
+downloads <- cran_downloads(package = "mikropml",
+                            from = "2020-11-23") %>%
     mutate(cum_count = cumsum(count))
 write_csv(downloads, here::here('data', 'downloads.csv'))
 head(downloads)
@@ -37,15 +48,31 @@ head(downloads)
 #> 6 2020-11-28    14 mikropml        80
 ```
 
+## Get the badge
+
+``` r
+badge_url <- "https://cranlogs.r-pkg.org/badges/grand-total/mikropml"
+badge_img <- magick::image_read_svg(badge_url, width = 1000)
+```
+
 ## Plot over time
 
 ``` r
-downloads %>% 
+library(cowplot)
+
+downloads_plot <- downloads %>% 
     ggplot(aes(date, cum_count)) + 
     geom_line(color = '#c882fc') + 
     scale_x_date(date_labels = "%b %Y") + 
     theme_bw() + 
     labs(x = '', y = 'downloads to date', title = 'mikropml downloads')
+
+ggdraw() +
+    draw_plot(downloads_plot) +
+    draw_image(badge_img, 
+               x = 0.99, y = 0.99, 
+               hjust = 1, vjust = 1, halign = 1, valign = 1,
+               width = 0.15)
 ```
 
-![](figures/plot-1.png)<!-- -->
+![](figures/plot-downloads-time-1.png)<!-- -->
