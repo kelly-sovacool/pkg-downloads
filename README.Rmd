@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = 'figures/'
+)
+```
+
+# pkg-downloads
+
+<!-- badges: start -->
+[![render-rmarkdown](https://github.com/kelly-sovacool/pkg-downloads/workflows/render-rmarkdown/badge.svg)](https://github.com/kelly-sovacool/pkg-downloads/actions)
+<!-- badges: end -->
+
+[`mikropml`](https://github.com/SchlossLab/mikropml) package download counts from `cranlogs`
+
+## Download the downloads
+
+```{r download_data}
+library(tidyverse)
+downloads <- cranlogs::cran_downloads(package = "mikropml",
+                                      from = "2020-11-23") %>%
+    mutate(cum_count = cumsum(count))
+write_csv(downloads, here::here('data', 'downloads.csv'))
+head(downloads)
+```
+
+## Plot over time
+
+```{r plot}
+downloads %>% 
+    ggplot(aes(date, cum_count)) + 
+    geom_line(color = '#c882fc') + 
+    scale_x_date(date_labels = "%b %Y") + 
+    theme_bw() + 
+    labs(x = '', y = 'downloads to date', title = 'mikropml downloads')
+```
+
