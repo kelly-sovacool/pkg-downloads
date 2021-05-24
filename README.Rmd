@@ -1,5 +1,7 @@
 ---
-output: github_document
+output: 
+  github_document:
+    html_preview: false
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -66,3 +68,4 @@ ggdraw() +
                width = 0.15)
 ```
 
+last updated: `r Sys.Date()`
