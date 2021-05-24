@@ -1,13 +1,8 @@
 name: render-rmarkdown
 
 on:
-  push:
-    branches:
-      - main
-#    paths:
-#      - '**.Rmd'
-#  schedule:
-#    - cron: '0 5 * * 1'
+  schedule:
+    - cron: '0 5 * * 1'
 
 jobs:
   build:
