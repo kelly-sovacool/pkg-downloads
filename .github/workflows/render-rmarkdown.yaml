@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '**.Rmd'
-  schedule:
-    - cron: '0 5 * * 1'
+#    paths:
+#      - '**.Rmd'
+#  schedule:
+#    - cron: '0 5 * * 1'
 
 jobs:
   build:
