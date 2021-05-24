@@ -2,6 +2,8 @@ name: render-rmarkdown
 
 on:
   push:
+    branches:
+      - main
     paths:
       - '**.Rmd'
   schedule:
