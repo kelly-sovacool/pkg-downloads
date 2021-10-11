@@ -1,8 +1,9 @@
 name: render-rmarkdown
 
 on:
-  schedule:
-    - cron: '0 5 * * 1'
+  push
+#  schedule:
+#    - cron: '0 5 * * 1'
 
 jobs:
   build:
@@ -32,9 +33,10 @@ jobs:
           restore-keys: r-
 
       - name: Install packages
+        shell: Rscript {0}
         run: |
-          R -e 'install.packages("renv")'
-          R -e 'renv::restore()'
+          install.packages("renv")
+          renv::restore()
 
       - name: Render Rmarkdown files
         run: |
