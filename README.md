@@ -17,6 +17,8 @@ library(cowplot)
 library(magick)
 library(rsvg)
 library(tidyverse)
+#> Warning: package 'purrr' was built under R version 4.1.2
+#> Warning: package 'stringr' was built under R version 4.1.2
 ```
 
 ## Download the downloads
@@ -65,4 +67,4 @@ ggdraw() +
 
 ![](figures/plot-downloads-time-1.png)<!-- -->
 
-last updated: 2022-05-09
+last updated: 2022-05-23
