@@ -25,6 +25,7 @@ knitr::opts_chunk$set(
 ```{r lib, message = FALSE}
 library(cranlogs)
 library(cowplot)
+library(glue)
 library(magick)
 library(rsvg)
 library(tidyverse)
@@ -58,7 +59,9 @@ downloads_plot <- downloads %>%
     geom_line(color = '#c882fc') + 
     scale_x_date(date_labels = "%b %Y") + 
     theme_bw() + 
-    labs(x = '', y = 'downloads to date', title = 'mikropml downloads')
+    labs(x = '', y = 'downloads to date', 
+         title = 'mikropml downloads',
+         caption = glue("last updated: {Sys.Date()}"))
 
 ggdraw() +
     draw_plot(downloads_plot) +
@@ -68,4 +71,3 @@ ggdraw() +
                width = 0.15)
 ```
 
-last updated: `r Sys.Date()`

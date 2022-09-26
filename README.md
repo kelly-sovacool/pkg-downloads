@@ -14,11 +14,10 @@ counts from `cranlogs`
 ``` r
 library(cranlogs)
 library(cowplot)
+library(glue)
 library(magick)
 library(rsvg)
 library(tidyverse)
-#> Warning: package 'purrr' was built under R version 4.1.2
-#> Warning: package 'stringr' was built under R version 4.1.2
 ```
 
 ## Download the downloads
@@ -55,7 +54,9 @@ downloads_plot <- downloads %>%
     geom_line(color = '#c882fc') + 
     scale_x_date(date_labels = "%b %Y") + 
     theme_bw() + 
-    labs(x = '', y = 'downloads to date', title = 'mikropml downloads')
+    labs(x = '', y = 'downloads to date', 
+         title = 'mikropml downloads',
+         caption = glue("last updated: {Sys.Date()}"))
 
 ggdraw() +
     draw_plot(downloads_plot) +
@@ -66,5 +67,3 @@ ggdraw() +
 ```
 
 ![](figures/plot-downloads-time-1.png)<!-- -->
-
-last updated: 2022-09-26
