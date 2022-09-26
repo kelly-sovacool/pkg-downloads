@@ -55,7 +55,7 @@ downloads_plot <- downloads %>%
     scale_x_date(date_labels = "%b %Y") + 
     theme_bw() + 
     labs(x = '', y = 'downloads to date', 
-         title = 'mikropml downloads',
+         title = 'mikropml downloads from CRAN',
          caption = glue("last updated: {Sys.Date()}"))
 
 ggdraw() +
