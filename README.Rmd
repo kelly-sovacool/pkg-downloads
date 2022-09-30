@@ -39,7 +39,7 @@ downloads <- cran_downloads(package = "mikropml",
                             from = "2020-11-23") %>%
     mutate(cum_count = cumsum(count))
 write_csv(downloads, here::here('data', 'downloads.csv'))
-head(downloads)
+tail(downloads)
 ```
 
 ## Get the badge
