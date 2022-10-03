@@ -18,6 +18,8 @@ library(glue)
 library(magick)
 library(rsvg)
 library(tidyverse)
+#> Warning: package 'purrr' was built under R version 4.1.2
+#> Warning: package 'stringr' was built under R version 4.1.2
 ```
 
 ## Download the downloads
@@ -29,12 +31,12 @@ downloads <- cran_downloads(package = "mikropml",
 write_csv(downloads, here::here('data', 'downloads.csv'))
 tail(downloads)
 #>           date count  package cum_count
-#> 672 2022-09-25    10 mikropml     10090
-#> 673 2022-09-26    17 mikropml     10107
-#> 674 2022-09-27    12 mikropml     10119
 #> 675 2022-09-28     4 mikropml     10123
 #> 676 2022-09-29    12 mikropml     10135
-#> 677 2022-09-30     0 mikropml     10135
+#> 677 2022-09-30    13 mikropml     10148
+#> 678 2022-10-01     2 mikropml     10150
+#> 679 2022-10-02     0 mikropml     10150
+#> 680 2022-10-03     0 mikropml     10150
 ```
 
 ## Get the badge
