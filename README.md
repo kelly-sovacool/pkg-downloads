@@ -31,12 +31,12 @@ downloads <- cran_downloads(package = "mikropml",
 write_csv(downloads, here::here('data', 'downloads.csv'))
 tail(downloads)
 #>           date count  package cum_count
-#> 780 2023-01-11     7 mikropml     11280
-#> 781 2023-01-12    10 mikropml     11290
-#> 782 2023-01-13     9 mikropml     11299
-#> 783 2023-01-14     4 mikropml     11303
-#> 784 2023-01-15     0 mikropml     11303
-#> 785 2023-01-16     0 mikropml     11303
+#> 787 2023-01-18    57 mikropml     11444
+#> 788 2023-01-19    23 mikropml     11467
+#> 789 2023-01-20     8 mikropml     11475
+#> 790 2023-01-21    10 mikropml     11485
+#> 791 2023-01-22     0 mikropml     11485
+#> 792 2023-01-23     0 mikropml     11485
 ```
 
 ## Get the badge
