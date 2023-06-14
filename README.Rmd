@@ -71,3 +71,7 @@ ggdraw() +
                width = 0.15)
 ```
 
+```{r plot-downloads-time_no-badge, fig.width=5, fig.height=3.75, dpi=300}
+ggdraw() +
+    draw_plot(downloads_plot)
+```
