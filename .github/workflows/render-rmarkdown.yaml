@@ -3,10 +3,14 @@ name: render-rmarkdown
 on:
   schedule:
     - cron: '0 5 * * 1'
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/render-rmarkdown.yaml
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
