@@ -1,11 +1,13 @@
 Package: pkg.downloads
 Title: Package Download Counts
 Version: 0.0.0.9000
+License: MIT + file LICENSE
 Imports:
-    cranlogs,
     cowplot,
+    cranlogs,
     glue,
+    here,
     magick,
     rsvg,
     tidyverse
-License: MIT + file LICENSE
+Encoding: UTF-8
