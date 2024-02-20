@@ -1,3 +1,2 @@
-^renv$
-^renv\.lock$
 ^\.github$
+^LICENSE\.md$

@@ -52,7 +52,6 @@ badge_img <- magick::image_read_svg(badge_url, width = 1000)
 ## Plot over time
 
 ```{r plot-downloads-time, fig.width=5, fig.height=3.75, dpi=300}
-library(cowplot)
 
 downloads_plot <- downloads %>% 
     ggplot(aes(date, cum_count)) + 

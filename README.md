@@ -28,13 +28,13 @@ downloads <- cran_downloads(package = "mikropml",
     mutate(cum_count = cumsum(count))
 write_csv(downloads, here::here('data', 'downloads.csv'))
 tail(downloads)
-#>           date count  package cum_count
-#> 929 2023-06-09    13 mikropml     13484
-#> 930 2023-06-10     5 mikropml     13489
-#> 931 2023-06-11     5 mikropml     13494
-#> 932 2023-06-12    10 mikropml     13504
-#> 933 2023-06-13     0 mikropml     13504
-#> 934 2023-06-14     0 mikropml     13504
+#>            date count  package cum_count
+#> 1179 2024-02-14    33 mikropml     17205
+#> 1180 2024-02-15     6 mikropml     17211
+#> 1181 2024-02-16     6 mikropml     17217
+#> 1182 2024-02-17    14 mikropml     17231
+#> 1183 2024-02-18     1 mikropml     17232
+#> 1184 2024-02-19     0 mikropml     17232
 ```
 
 ## Get the badge
@@ -47,7 +47,6 @@ badge_img <- magick::image_read_svg(badge_url, width = 1000)
 ## Plot over time
 
 ``` r
-library(cowplot)
 
 downloads_plot <- downloads %>% 
     ggplot(aes(date, cum_count)) + 
