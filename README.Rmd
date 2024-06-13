@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 # pkg-downloads
 
 <!-- badges: start -->
-[![render-rmarkdown](https://github.com/kelly-sovacool/pkg-downloads/workflows/render-rmarkdown/badge.svg)](https://github.com/kelly-sovacool/pkg-downloads/actions)
+[![render-rmarkdown](https://github.com/kelly-sovacool/pkg-downloads/actions/workflows/render-rmarkdown.yaml/badge.svg)](https://github.com/kelly-sovacool/pkg-downloads/actions/workflows/render-rmarkdown.yaml)
 <!-- badges: end -->
 
 [`mikropml`](https://github.com/SchlossLab/mikropml) package download counts from `cranlogs`
