@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![render-rmarkdown](https://github.com/kelly-sovacool/pkg-downloads/workflows/render-rmarkdown/badge.svg)](https://github.com/kelly-sovacool/pkg-downloads/actions)
+[![render-rmarkdown](https://github.com/kelly-sovacool/pkg-downloads/actions/workflows/render-rmarkdown.yaml/badge.svg)](https://github.com/kelly-sovacool/pkg-downloads/actions/workflows/render-rmarkdown.yaml)
 <!-- badges: end -->
 
 [`mikropml`](https://github.com/SchlossLab/mikropml) package download
@@ -29,12 +29,12 @@ downloads <- cran_downloads(package = "mikropml",
 write_csv(downloads, here::here('data', 'downloads.csv'))
 tail(downloads)
 #>            date count  package cum_count
-#> 1291 2024-06-05    27 mikropml     18763
-#> 1292 2024-06-06     5 mikropml     18768
-#> 1293 2024-06-07    10 mikropml     18778
-#> 1294 2024-06-08     4 mikropml     18782
-#> 1295 2024-06-09     0 mikropml     18782
-#> 1296 2024-06-10     0 mikropml     18782
+#> 1298 2024-06-12    33 mikropml     18842
+#> 1299 2024-06-13    14 mikropml     18856
+#> 1300 2024-06-14     4 mikropml     18860
+#> 1301 2024-06-15     2 mikropml     18862
+#> 1302 2024-06-16     0 mikropml     18862
+#> 1303 2024-06-17     0 mikropml     18862
 ```
 
 ## Get the badge
